@@ -5,14 +5,17 @@
     <title>List of files</title>
 </head>
 <body>
+<div>
+<h3>List of files</h3>
 <ul>
     {% for item in data %}
-    <li>{{ item._id  }} - {{ item.filename }}</li>
+    <li>{{ item._id  }} - {{ item.filename }}
         <form method="POST" action="/delete" style="display: inline">
               <input type="hidden" value="{{ item._id }}" name="item">
               <input type="submit" value="Delete">
-            </form>
+            </form></li>
     {% endfor %}
 </ul>
+</div>
 </body>
 </html>
