@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+<div style="">
 <a href="{{ url_for('upload') }}">Upload document</a>
 <a href="{{ url_for('diff_last_2') }}">Last 2 diff report</a>
 <a href="{{ url_for('get_last_2') }}">show last 2 entries</a>
 <a href="{{ url_for('showallrecords') }}">Show all files</a>
-</body>
-</html>
+</div>
+{% endblock %}
